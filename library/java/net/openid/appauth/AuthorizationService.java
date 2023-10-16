@@ -559,6 +559,7 @@ public class AuthorizationService {
         Intent intent;
         if (mBrowser.useCustomTab) {
             intent = customTabsIntent.intent;
+			intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         } else {
             intent = new Intent(Intent.ACTION_VIEW);
         }
